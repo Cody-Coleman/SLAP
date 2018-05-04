@@ -104,28 +104,8 @@ def config_setup(ask_if_found=None):
         write_config = True
 
     if write_config is True:
-        # Gives user's home directory
-        # Gives username by splitting path based on OS
-        user = os.path.split(os.path.expanduser('~'))[-1]
-        living_dir = current_dir.replace(user, "%(USER)s")
-        output_dir = os.path.join(os.path.expanduser('~'), "PUP_OUTPUT")
-        download_dir = os.path.join(output_dir, "Downloads")
-        example_config = os.path.join(current_dir, "example.cfg")
-
-        print("\nWriting out {config_file} with the following values:")
-        print("USER: " + user)
-        print("LIVING_DIR: " + living_dir)
-        print("OUTPUT_DIR: " + output_dir)
-
-        ex = open(example_config, "r")
-        cf = open(config_file, "w")
-        data = ex.read().format(user=user, living_dir=living_dir, output_dir=output_dir)
-        cf.write(data)
-        cf.close()
-        ex.close()
-
-        print(f"{config_file} created and written out, be sure to check that the values are what you expect")
-
+        # NEEDS TO BE RECONFIGURED
+        pass
 
 def add_to_path():
     current_dir = os.path.abspath(__file__).split(__file__)[0][:-1]
@@ -144,7 +124,7 @@ def add_to_path():
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description="Sets up PUP so you can use it! no arguments installs everything")
+    parser = argparse.ArgumentParser(description="Sets up SLAP so you can use it! no arguments installs everything")
 
     parser.add_argument('--deps', action="store_true",
                         help='Install the dependencies')
@@ -179,4 +159,4 @@ if __name__ == '__main__':
         config_setup()
         add_to_path()
 
-        print("Setup complete! You should now be able to run PUP Tests")
+        print("Setup complete! You should now be able to run SLAP Tests")

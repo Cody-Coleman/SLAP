@@ -1,4 +1,4 @@
-PUP README
+SLAP README
 	Instructions and a helpful guideline to getting started with creating automation
 
 Installation Instructions:
@@ -12,10 +12,6 @@ Installation Instructions:
     
     Take a look at this file and make sure it's what you want / need for yoru configuration settings. 
     pycharm is by far the best IDE for any python code, and the community edition (free) will do everything you would need for this project
-    
-	
-Git Repository
-	ssh://git@gitlab-app.eng.qops.net:10022/testing/PUP.git
 
 Commenting Guidelines
 

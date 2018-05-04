@@ -50,7 +50,7 @@ class Driver(webdriver.Chrome, webdriver.Ie, webdriver.Firefox):
             profile.set_preference("browser.download.dir", download_path)
             profile.set_preference("devtools.selfxss.count", 11)
             profile.set_preference("print.always_print_silent", True)
-            ext = file_path("PUP Network Listener.xpi")
+            ext = file_path("SLAP Network Listener.xpi")
             profile.add_extension(ext)
 
             if device_type == 'iphone':
@@ -82,7 +82,7 @@ class Driver(webdriver.Chrome, webdriver.Ie, webdriver.Firefox):
             options.add_argument('test-type')
             options.add_argument('disable-popup-blocking')
 
-            ext = file_path("PUP Network Listener.crx")
+            ext = file_path("SLAP Network Listener.crx")
             options.add_extension(ext)
 
             prefs = {"download.default_directory": download_path}
