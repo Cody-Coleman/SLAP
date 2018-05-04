@@ -1,9 +1,54 @@
-SLAP README
-	Instructions and a helpful guideline to getting started with creating automation
+SLAP Automation Framework
+=============
+A python framework running selenium tests to drive integration, api, and end to end testing.
+Test Automation projects get abandoned usually for one of 3 reasons:
+
+1. It is to hard to write the tests to get good coverage.
+2. It is to hard to maintain a test and update it as the project changes
+3. It is to hard to run the tests quickly enough to be relevant.
+
+When using this framework you need to keep in mind these issues, and design the tests and underlying verbs in a way to
+make sure that the tests are easy to write / understand, easy to maintain, and easy to execute. SLAP accomplishes this
+in the following ways:
+
+1. Each test case is written in liner, and discrete, steps, in much the same way you'd write a manual test case.
+There is no looping, logic, assignments or blocks in a test case, just the steps that are executed in a simple to
+read manner. Each test case expects all actions to return true, and if not will fail the test at that step (It will not
+continue running the steps after a failed point).
+
+EXAMPLE:
+
+```python
+    def test_ti_login_0002(self):
+        """
+        Login: Failed login test, expected to fail
+        @test Uses bad credentials to login, test is an example of a failure
+        @author CodyC
+        @date 04/29/18
+        """
+        # DEMONSTRATES NAVIGATING TO A LOGIN PAGE, WITH ERROR CODES FOR FAILURES AND CUSTOM ERRORS
+        try:
+            # NAVIGATE TO THE PAGE
+            test(ti.go_to(location="The Internet", url=td.url), "GOTO_0000")
+            # OPEN THE POPUP DIALOG
+            test(ti.go_to(location="Form Authentication"), "GOTO_0001")
+            # FILL OUT THE FORM
+            test(ti.dialog(dialog='Login Page', user=td.bad_user, password=td.bad_pass), "DIALOG_0001")
+            # VERIFY THE RESULTS OF THE LOGIN
+            test(ti.verify(item="Authenticated"), "Failed to Authenticate")
+        except Exception as e:
+            ti.write(e, level='error')
+            ti.take_screenshot(self.whoami())
+            self.fail(e)
+```
+
+
+
+
 
 Installation Instructions:
 
-    You must have a 2.7 version of python, to setup the automation to run locally (and executed against some remote environment)
+    You must have a 3.6 version of python, to setup the automation to run locally (and executed against some remote environment)
     run the following command from the repositories root directory:
     
     sudo python setup.py
@@ -73,7 +118,4 @@ Command Line Parameters:
 Examples
 
     Running a test:
-        ./pup.py -t rs_d_messages_0001 -e az1 -r chrome
-
-    Adding a test to Zephyr:
-        ./pup.py -t new_test_0001 -z ProjectNameInZephyr
+        ./slap.py -t ti_login_0001 -e dc12 -b chrome
