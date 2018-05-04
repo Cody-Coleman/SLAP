@@ -18,7 +18,7 @@ class TICore(Core):
         @note sets self.driver to None
         """
         super(TICore, self).__init__()
-        self.verify_obj = Verify()
+        self.verify_obj = Verify(self.driver)
 
     def go_to(self, location, menu=None, *args, **kw):
         """
