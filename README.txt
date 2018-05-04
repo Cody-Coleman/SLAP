@@ -19,27 +19,27 @@ continue running the steps after a failed point).
 EXAMPLE:
 
 ```
-    def test_ti_login_0002(self):
-        """
-        Login: Failed login test, expected to fail
-        @test Uses bad credentials to login, test is an example of a failure
-        @author CodyC
-        @date 04/29/18
-        """
-        # DEMONSTRATES NAVIGATING TO A LOGIN PAGE, WITH ERROR CODES FOR FAILURES AND CUSTOM ERRORS
-        try:
-            # NAVIGATE TO THE PAGE
-            test(ti.go_to(location="The Internet", url=td.url), "GOTO_0000")
-            # OPEN THE POPUP DIALOG
-            test(ti.go_to(location="Form Authentication"), "GOTO_0001")
-            # FILL OUT THE FORM
-            test(ti.dialog(dialog='Login Page', user=td.bad_user, password=td.bad_pass), "DIALOG_0001")
-            # VERIFY THE RESULTS OF THE LOGIN
-            test(ti.verify(item="Authenticated"), "Failed to Authenticate")
-        except Exception as e:
-            ti.write(e, level='error')
-            ti.take_screenshot(self.whoami())
-            self.fail(e)
+def test_ti_login_0002(self):
+    """
+    Login: Failed login test, expected to fail
+    @test Uses bad credentials to login, test is an example of a failure
+    @author CodyC
+    @date 04/29/18
+    """
+    # DEMONSTRATES NAVIGATING TO A LOGIN PAGE, WITH ERROR CODES FOR FAILURES AND CUSTOM ERRORS
+    try:
+        # NAVIGATE TO THE PAGE
+        test(ti.go_to(location="The Internet", url=td.url), "GOTO_0000")
+        # OPEN THE POPUP DIALOG
+        test(ti.go_to(location="Form Authentication"), "GOTO_0001")
+        # FILL OUT THE FORM
+        test(ti.dialog(dialog='Login Page', user=td.bad_user, password=td.bad_pass), "DIALOG_0001")
+        # VERIFY THE RESULTS OF THE LOGIN
+        test(ti.verify(item="Authenticated"), "Failed to Authenticate")
+    except Exception as e:
+        ti.write(e, level='error')
+        ti.take_screenshot(self.whoami())
+        self.fail(e)
 ```
 
 
