@@ -1,4 +1,4 @@
-SLAP Automation Framework
+# SLAP Automation Framework
 =============
 A python framework running selenium tests to drive integration, api, and end to end testing.
 Test Automation projects get abandoned usually for one of 3 reasons:
@@ -18,7 +18,7 @@ continue running the steps after a failed point).
 
 EXAMPLE:
 
-```python
+```
     def test_ti_login_0002(self):
         """
         Login: Failed login test, expected to fail
