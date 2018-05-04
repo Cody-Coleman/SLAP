@@ -1,0 +1,7 @@
+test_data:
+  environment: staging
+  basic_user: bobby
+  basic_pass: password
+  url: "http://the-internet.herokuapp.com/"
+  bad_user: admin
+  bad_pass: admin

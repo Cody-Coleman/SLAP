@@ -1,0 +1,8 @@
+test_data:
+  environment: production
+  user: tomsmith
+  password: SuperSecretPassword!
+  email: testuser@example.com
+  url: "http://the-internet.herokuapp.com/"
+  bad_user: bobby
+  bad_pass: password

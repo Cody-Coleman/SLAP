@@ -1,0 +1,8 @@
+selenium
+requests
+suds-jurko
+lxml
+pillow
+numpy
+pyyaml
+python-box

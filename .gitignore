@@ -1,0 +1,14 @@
+build/
+.idea/
+syntax: glob
+debug.txt
+.hgrc
+.hgcheck/*
+config.cfg
+*.pyc
+*.pyc.orig
+*.py.orig
+.DS_Store
+CodyC.xml
+*.iml
+geckodriver.log

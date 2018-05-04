@@ -1,0 +1,19 @@
+errors:
+  ad:
+  - failed to create group
+  - failed to delete group
+  api:
+  - api call failed
+  - return data doesn't match what was expected
+  dialog:
+  - failed to complete the dialog
+  - failed to detect the dialog
+  goto:
+  - failed to navigate
+  verify:
+  - failed to find expected value
+  - failed to no longer find expected value
+  - failed to authenticate
+  - authenticated and should have failed
+  login:
+  - unable to login using basic auth

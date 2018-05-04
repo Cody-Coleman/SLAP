@@ -1,0 +1,29 @@
+---
+test_data:
+  environment: dc12
+  # THE USERS BROKEN DOWN BY PRODUCT
+  # PRODUCT 1 USER SET
+  p1:
+    url: http://product.site.org?id=1
+    user_two_p1:
+      user_id: USER_bBBB33AABb4bzr1
+      token: XX122xx34gghhAhASDF@!#sad12A
+    user_three_p1:
+      user_id: USER_bBBB33AABb4bzr2
+      token: XX122xx34gghhAhASDF@!#sad12B
+    user_one_p1:
+      user_id: USER_bBBB33AABb4bzr3
+      token: XX122xx34gghhAhASDF@!#sad12C
+  # PRODUCT TWO
+  p2:
+    url: http://product.site.org?id=1
+    user_two_p2:
+      user_id: USER_bBBB33AABb4bzr1
+      token: XX122xx34gghhAhASDF@!#sad12A
+    user_three_p2:
+      user_id: USER_bBBB33AABb4bzr1
+      token: XX122xx34gghhAhASDF@!#sad12A
+    user_one_p2:
+      user_id: USER_bBBB33AABb4bzr1
+      token: XX122xx34gghhAhASDF@!#sad12A
+

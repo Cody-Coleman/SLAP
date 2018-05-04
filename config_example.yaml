@@ -1,0 +1,91 @@
+---
+#################################
+# if set to a value, will use something other than cwd for the directory to run in
+#################################
+living_dir:
+
+#################################
+# If set, will use something other than cwd for the output of the test_cases, usually a good idea to have
+# this as a value pointing to something outside the repo
+#################################
+output_dir: "/Users/CodyC/Documents/CUP_OUTPUT"
+
+#################################
+# Specifies where to look for all the test data to glob together. If not specified just assumes
+# living_dir + "/Assets/TestData
+##################################
+test_data_dir:
+
+#################################
+# A comma seperated list of test files to not include in the general test_data import
+#################################
+test_data_exclusion:
+
+#################################
+# The location of the yaml file listing
+# All the test case modules that hold
+# the test case file
+# defaults to living_dir /test_cases.yaml
+#################################
+test_case_file:
+
+#################################
+# If set will be the location of the
+# error codes to return on failure
+# by default assumes living_dir + "/Assets/ErrorCodes
+#################################
+error_code_dir:
+
+#################################
+# if set will exclude these files
+# from the Error codes, comma seperated
+# list of .yaml files
+#################################
+error_code_exclusion:
+
+#################################
+# If set will be the location of the JS Snippets
+# js snippets load javascript onto a page before a test step
+# or test verb is executed, useful for things like counting failures
+# ajax or network requests, exposing buttons, etc
+# Assumes living_dir + "/Assets/JSSnippets"
+#################################
+js_snippet_dir:
+
+#################################
+# Environment is the default test datacenters to
+# to run test_cases in if nothing else is specified
+# using the -e flag
+#################################
+environment: production
+
+#################################
+# log level to assume unless overridden on the command line
+# 1 -> info / error to screen, debug to file
+# 2 -> status only to screen, debug to file
+# 0 -> debug to screen and file
+#################################
+log_level: 1
+
+#################################
+# Bug Repo is where to check for the
+# bug status of a test case to include
+# in the results of the test
+#################################
+bug_repo: https://atlassian.net/browse
+
+#################################
+# the staging and prod parmaeters
+# indicate what environments are staging
+# vs prod to properly load test data accordingly
+#################################
+stage_env: staging
+prod_env: production
+
+#################################
+# The windows are the start location
+# of a window when starting the web_driver
+#################################
+window_x: -1224
+window_y: 0
+
