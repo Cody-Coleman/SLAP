@@ -1,0 +1,12 @@
+.vagrant
+*.vagrant/
+build
+build/*
+logs
+logs/*
+.gitignore
+README.md
+Vagrantfile
+*.idea/*
+*.pyc
+build.sh

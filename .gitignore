@@ -1,4 +1,3 @@
-build/
 .idea/
 syntax: glob
 debug.txt
