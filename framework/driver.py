@@ -30,7 +30,6 @@ class Driver(webdriver.Chrome, webdriver.Ie, webdriver.Firefox):
     """
 
     def __init__(self, browser_type, device_type=None, *args, **kw):
-        # from framework.core import Core
         from library.helper import file_path
         config = Config()
         self.browser_type = browser_type.lower()
@@ -76,7 +75,7 @@ class Driver(webdriver.Chrome, webdriver.Ie, webdriver.Firefox):
                 profile.add_extension(ext)
 
             self = webdriver.Firefox.__init__(self, firefox_profile=profile, *args, **kw)
-
+            # self = webdriver.Remote.__init__(self, firefox_profile=profile, *args, **kw)
         elif self.browser_type == 'chrome':
             options = webdriver.ChromeOptions()
             options.add_argument('test-type')
