@@ -3,6 +3,7 @@
 A python framework running selenium tests to drive integration, api, and end to end testing.
 This framework is designed behind these 3 principles, principles that when not followed usually lead to automation abandonment
 
+
 ## The Three Principles
 1. It must be easy to write the tests to get good coverage.
 2. It must be easy to maintain the tests and update them as the project changes
