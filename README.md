@@ -167,7 +167,9 @@ and time stamped that includes the **DEBUG** level logs. This way you don't need
 
 When there is a failure, the log file will write out the line and test case in such a way to make it easy to spot in the logs:
 ```
-05-04 09:44:19 - [ti_e17c: ERROR] - [framework.the_internet.ti_core:133] - Timed Out waiting for page to load or element to be found: Message: Value: //h2[contains(text(), 'Secure Area')], by: xpath, wait: 10
+05-04 09:44:19 - [ti_e17c: ERROR] - [framework.the_internet.ti_core:133] - Timed Out waiting for page to load or element to be found:
+
+Message: Value: //h2[contains(text(), 'Secure Area')], by: xpath, wait: 10
 
 05-04 09:44:19 - [ti_e17c: ERROR] - [framework.core:414] -
 
